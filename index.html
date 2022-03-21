@@ -36,6 +36,7 @@
           <div class="content-input">
             <input
               type="text"
+              id="first-name"
               name="first-name"
               pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
               placeholder="First Name"
@@ -44,6 +45,7 @@
           <div class="content-input">
             <input
               type="text"
+              id="last-name"
               name="last-name"
               placeholder="Last Name"
               pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
@@ -52,13 +54,19 @@
           <div class="content-input">
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="Email Address"
               pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
             />
           </div>
           <div class="content-input">
-            <input type="password" name="password" placeholder="Password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
           </div>
           <button type="submit">Claim your free trial</button>
           <p class="form__footer">

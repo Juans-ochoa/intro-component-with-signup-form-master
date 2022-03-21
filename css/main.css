@@ -113,9 +113,13 @@ img.icon-error {
   margin-right: 0.5rem;
   text-align: end;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 200;
   color: var(--color-red);
+}
+
+input.input-error-active {
+  border: 2px solid var(--color-red);
 }
 
 .none {
