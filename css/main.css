@@ -71,7 +71,7 @@ main {
   box-shadow: 0 0.5rem 0 rgba(128, 126, 126, 0.316);
 }
 
-.form {
+#contact-form {
   width: 100%;
   height: auto;
   margin: 1rem auto;
@@ -81,7 +81,7 @@ main {
   box-shadow: 0 0.5rem 0 rgba(128, 126, 126, 0.316);
 }
 
-.form .content-input {
+#contact-form .content-input {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -90,6 +90,7 @@ main {
 }
 
 .content-input > input {
+  position: relative;
   width: 100%;
   margin: 0.5rem auto;
   padding: 1rem;
@@ -97,6 +98,28 @@ main {
   border: thin solid var(--color-grayish-blue);
   font-weight: 600;
   color: var(--color-dark-blue);
+}
+
+img.icon-error {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  width: 24px;
+  height: 24px;
+}
+
+.message-error {
+  display: block;
+  margin-right: 0.5rem;
+  text-align: end;
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: var(--color-red);
+}
+
+.none {
+  display: none;
 }
 
 button[type="submit"] {
@@ -165,7 +188,7 @@ button[type="submit"]:active {
     font-size: 0.9rem;
   }
 
-  .form {
+  #contact-form {
     padding: 2rem;
   }
 }
