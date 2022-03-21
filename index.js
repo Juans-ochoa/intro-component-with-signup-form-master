@@ -70,26 +70,26 @@ function validateForm() {
 
     el.insertAdjacentElement("afterend", $img);
     el.insertAdjacentElement("afterend", $span);
+
+    d.addEventListener("keyup", (e) => {
+      $inputs.forEach((el) => {
+        if (e.target === el) {
+          const { name, value, pattern } = el;
+          validateInput(name, value, pattern);
+        }
+      });
+    });
+
+    d.addEventListener("submit", (e) => {
+      e.preventDefault();
+      $inputs.forEach((el) => {
+        const { name, value, pattern } = el;
+        validateInput(name, value, pattern);
+      });
+    });
   });
 }
 
 d.addEventListener("DOMContentLoaded", (e) => {
   validateForm();
-});
-
-d.addEventListener("keyup", (e) => {
-  $inputs.forEach((el) => {
-    if (e.target === el) {
-      const { name, value, pattern } = el;
-      validateInput(name, value, pattern);
-    }
-  });
-});
-
-d.addEventListener("submit", (e) => {
-  e.preventDefault();
-  $inputs.forEach((el) => {
-    const { name, value, pattern } = el;
-    validateInput(name, value, pattern);
-  });
 });
